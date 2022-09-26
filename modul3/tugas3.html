@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../leaflet.css"/>
+    <script src="../leaflet.js"></script>
+    <title>Tampilkan Multi Tooltip atau Popup menggunakan array data</title>
+</head>
+<body>
+    <div id="map_pertama" style="width: 100%; height: 600px"></div>
+
+</body>
+<script type="text/javascript">
+   var mymap = L.map('map_pertama').setView([-0.9441925519240235, 100.40293041377834], 13); //kota padang
+
+   var tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+		maxZoom: 19,
+		attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+	}).addTo(mymap);
+    var my location = [
+        [-0.9240231947198148, 100.36248419058865,'Masjid Raya Sumbar','Informasi Tentang Masjid Raya sumbar'],
+        [-0.9368269969568485, 100.36044265174931,'Kantor Gubernur Sumbar','Informasi Tentang Kantor Guberneur sumbar'],
+        []
+    ];
+
+
+  
+</script>
+</html>
