@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../leaflet.css"/>
+    <script src="../leaflet.js"></script>
+    <title>Tugas 10 Titik Rumah Makan</title>
+</head>
+<body>
+    <div id="mapku" style="width: 100%; height: 600px"></div>
+</body>
+<script type="text/javascript">
+    var mymap = L.map('mapku').setView([-0.9441925519240235, 100.40293041377834], 13);
+        var tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+		maxZoom: 19,
+		attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+	}).addTo(mymap);
+    
+    var LeafIcon = L.Icon.extend({
+        options:{
+            iconSize:[30,30]
+        }
+    });
+
+    var rmicon = new LeafIcon({iconUrl: '= image/RM.png'});
+   
+
+    L.marker([-0.8985474469229819, 100.3728211606051],{icon: rmicon}).bindPopup("Rumah Makan Mama").addTo(mymap); 
+    L.marker([-0.9036086388284524, 100.35455364044634],{icon: rmicon}).bindPopup("Rumah Makan Lamun Ombak").addTo(mymap); 
+    L.marker([-0.9438226136443665, 100.3744401527585],{icon: rmicon}).bindPopup("Rumah Makan Silungkang").addTo(mymap); 
+    L.marker([-0.9557908891602159, 100.36195534646114],{icon: rmicon}).bindPopup("Rumah Makan Malabar Arham").addTo(mymap); 
+    L.marker([-0.927991307774097, 100.36071278650564],{icon: rmicon}).bindPopup("Rumah Makan Sederhana").addTo(mymap); 
+    L.marker([-0.9448929875216169, 100.37118221042992],{icon: rmicon}).bindPopup("Rumah Makan Bungo Lado").addTo(mymap); 
+    L.marker([-0.9456331764506741, 100.36817813642705],{icon: rmicon}).bindPopup("Rumah Makan Ampera bundo").addTo(mymap); 
+    L.marker([-0.9519532701482148, 100.35990194111568],{icon: rmicon}).bindPopup("Rumah Makan  Simpang Raya").addTo(mymap); 
+    L.marker([-0.9362299633556426, 100.36586262799999],{icon: rmicon}).bindPopup("Rumah Makan Sinar Padang").addTo(mymap); 
+    L.marker([-0.9611174504904759, 100.40259816399303],{icon: rmicon}).bindPopup("Rumah Makan Singgalang").addTo(mymap);
+    
+
+</script>
+</html>
